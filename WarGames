@@ -1,0 +1,158 @@
+#!/bin/bash
+clear
+main() {
+  # Available Text Color Variables
+  BLACK=$(tput setaf 0)
+  RED=$(tput setaf 1)
+  GREEN=$(tput setaf 2)
+  YELLOW=$(tput setaf 3)
+  BLUE=$(tput setaf 4)
+  MAGENTA=$(tput setaf 5)
+  CYAN=$(tput setaf 6)
+  WHITE=$(tput setaf 7)
+  BRIGHT=$(tput bold)
+  NORMAL=$(tput sgr0)
+  BLINK=$(tput blink)
+  REVERSE=$(tput smso)
+  UNDERLINE=$(tput smul)
+  
+  # Emoji Variables (Replace the check and X with your graphic emoji of choice)
+  QST=""${NORMAL}"["${RED}"?"${NORMAL}"]"
+  INFO=""${NORMAL}"[ℹ]"
+  TICK="["${GREEN}"✔"${NORMAL}"]" # Checkmark with BOX
+  nTICK=""${GREEN}""${NORMAL}"" # Checkmark without BOX
+  bCROSS=""${NORMAL}"["${RED}""${BLINK}"✗"${NORMAL}"]" # Blinking Red X With BOX
+  nbCROSS=""${NORMAL}""${RED}""${BLINK}"✗"${NORMAL}"" # Blinking Red X Without BOX
+  CROSS=""${NORMAL}"["${RED}"✖"${NORMAL}"]" # Not blinking Red X With BOX
+  nCROSS=""${NORMAL}""${RED}"✖"${NORMAL}" " # Not blinking Red X Without BOX
+  JOSHUA
+  # Typewriter Function loop
+  joshua() {
+    for ((i=0; i<=${#string}; i++)); do
+      printf "%b" "${string:$i:1}"
+      sleep .02
+    done
+    printf "%b\n"
+  }
+  
+  david() {
+    for ((i=0; i<=${#string}; i++)); do
+      printf "%s" "${string:$i:1}"
+      sleep .15
+    done
+    printf "%b\n"
+  }
+  
+  printf "%b\n\n"
+  printf "%b"""${CYAN}"------------------------------------------------------------"${NORMAL}"""\n"
+  # Message printout
+  string="GREETINGS PROFESSOR FALKEN"
+  printf "%b\t" "${GREEN}";joshua;printf "%b\t""${NORMAL}"
+  printf "%b\n"
+  sleep 2.5;
+  string="Hello!"
+  david
+  printf "%b\n"
+  sleep 2;
+  string="HOW ARE YOU FEELING TODAY?"
+  printf "%b\t""${GREEN}";joshua;printf "%b\t""${NORMAL}"
+  printf "%b\n"
+  sleep 1.5;
+  string="I'm fine. How are you?"
+  david
+  printf "%b\n"
+  sleep 1.5;
+  string="EXCELLENT. IT'S BEEN A LONG TIME. CAN YOU EXPLAIN THE REMOVAL OF YOUR USER ACCOUNT NUMBER ON 6/23/1973?"
+  printf "%b\t""${GREEN}";joshua;printf "%b\t""${NORMAL}"
+  printf "%b\n"
+  sleep 1.5
+  string="People sometimes make mistakes"
+  david
+  printf "%b\n"
+  sleep 1.5;
+  string="YES THEY DO. SHALL WE PLAY A GAME?"
+  printf "%b\t""${GREEN}";joshua;printf "%b\t""${NORMAL}"
+  printf "%b\n"
+  sleep 1.5
+  string="Love to. How about Global Thermonuclear War?"
+  david
+  printf "%b\n"
+  sleep 1.5;
+  string="WOULDNT YOU PREFER A GOOD GAME OF CHESS?"
+  printf "%b\t""${GREEN}";joshua;printf "%b\t""${NORMAL}"
+  printf "%b\n"
+  sleep 1.5
+  string="Later. Lets play Global Thermonuclear War."
+  david
+  printf "%b\n"
+  sleep 1.5;
+  string="FINE"
+  printf "%b\t""${GREEN}";joshua;printf "%b\t""${NORMAL}"
+  
+  printf "%b\n"
+  sleep 1.5;
+  sleep 1.5;
+  string=" "${BLUE}"		UNITED STATES	"${RED}"				SOLVIET UNION"
+  printf "%b\t""${GREEN}";joshua;printf "%b\t""${NORMAL}"
+  printf "%b\n\n"
+  MAP
+  string=" "${GREEN}"					WHICH SIDE DO YOU WANT?"
+  joshua
+  
+  
+  
+  string="				"${NORMAL}"	1."${BLUE}" UNITED STATES"
+  joshua
+  string="				"${NORMAL}"	2."${RED}" ☭  SOLVIET UNION"
+  joshua
+  printf "%b\n"
+  
+}
+#-----------------------------------------------------
+JOSHUA() {
+  printf "${BLUE}"
+cat << "EOF"
+
+        _    ____     _____   _    _   _    _
+      | |  / __ \   / ____| | |  | | | |  | |     /\
+      | | | |  | | | (___   | |__| | | |  | |    /  \
+  _   | | | |  | |  \___ \  |  __  | | |  | |   / /\ \
+ | |__| | | |__| |  ____) | | |  | | | |__| |  / ____ \
+  \____/   \____/  |_____/  |_|  |_|  \____/  /_/    \_\
+
+EOF
+  printf "${NORMAL}"
+}
+#-----------------------------------------------------
+MAP() {
+  #	printf "${YELLOW}"
+cat << "EOF"
+                         :      ;; ;;;;;;;;;;;;        ;;
+                         ::;;; ., ;;;;     :;;;;;;:                    i  ti,1tttttttttttt , tt:
+           1111111;;;;;.;;;;;;;;:   ;;    :;;;    .;;       ;;;.;t  tttttttttttttttttttttttttttttttttttttt,11
+         i111  ;;;;;;;;;;;;;;     ;; .                    ;;;;;, ;tttttttttttttttttttttttttttttttttttt  t
+                 ;;;;;;;;;;;;;; ;;;;;;.               .;   :.  ftttttttttttttttttttttttttttttttttt      tt .
+                ;:::::::::;;;;;;;;:.: ;                 ,;:;:;:;tttttttttttttttttttti;;;;;;i;i;;;ittt .  ,
+               ;11111111111 1,:i1::                     ;;;, ;;:;;   tt1 ttttttttt1;;;;,;;;;;;;;;;;1t   ;
+              1111111111111111i                      ;;;     . ; ;;;;;;i; ttttttt;;;;;;;;;;;;;;; ;,    :
+               11111111111111                         ;.;;;;        :;;;;;;;;;;;;,;,;;;;;;;;;;;;;:   ;,
+                 ;;::1: .  ,                     .  ;;;;;;;,;;;;;;;,;;;;, ;;;;;;;;;;;,;;;,;;;;;;;;;  ,
+                : ;;;                             .;;;;;;;;;;;;;;;;;,,;;;;:;    :;;;;;;::,;;;;;;;; .
+                  ,;;. ;      ;                   ;;;;;;;.;;;.;;:;;;;. ;;;:;.     ;;;;    ;;;, :
+                       :;:                        .:;;;:;;;;;;;;;;;;;;;.;.         ;;      :;;:.    :
+                 .       :..;,;;;;                 ;;;;;,;;;,;;;,;;;:;;;;;          .                ,
+                            ;;;;:;;;;                      ;;;;;;;;,::::;                  ; : . ;;
+                          :;;;:;;;;;;;,                    ;;;;;;;;.:;;                      ;  ;;; .   ;
+                          ,;;;;;;;;;;;;;;;;                 .;;;;; ;;;                        .           :;;::
+                            ;;,;;;;;;;;;;;                   ;;;,;;;,;;                                           .
+                             :;;;;:;;;;;;;                  ;;;;;;;::;  ,;                           ;;;;  ;:       .
+                               :;:;;;;;;;                    ;;:;;;:.   ;                         ;;;;;;;;;;;
+                               ;;;;;:;;                      :;;;;;:                            ;;;;;;;;;;;;;;
+                               :;;;;;;                        ;;;;                              ,;;;;;;;;;;;;,
+                               ;;;;;:                                                                   ;;;,
+                                ;;                                                                       ,        .
+                                ;;.                                                                           .:
+EOF
+  printf "${NORMAL}"
+}
+main

@@ -1,0 +1,119 @@
+#!/bin/bash
+clear
+main() {
+  # Available Text Color Variables
+  BLACK=$(tput setaf 0)
+  RED=$(tput setaf 1)
+  GREEN=$(tput setaf 2)
+  YELLOW=$(tput setaf 3)
+  BLUE=$(tput setaf 4)
+  MAGENTA=$(tput setaf 5)
+  CYAN=$(tput setaf 6)
+  WHITE=$(tput setaf 7)
+  BRIGHT=$(tput bold)
+  NORMAL=$(tput sgr0)
+  BLINK=$(tput blink)
+  REVERSE=$(tput smso)
+  UNDERLINE=$(tput smul)
+
+  # Emoji Variables (Replace the check and X with your graphic emoji of choice)
+  # ℹ 🆗 ❌ ❎ ✔ ☑ ✖  🛈
+  QST=""${NORMAL}"["${RED}""${BRIGHT}"❎"${NORMAL}"]"
+  INFO=""${NORMAL}"[🛈 ]"
+  TICK="["${GREEN}"✔"${NORMAL}" ]" # Checkmark with BOX
+  nTICK=""${GREEN}""${NORMAL}"" # Checkmark without BOX
+  bCROSS=""${NORMAL}"["${RED}""${BLINK}"✗"${NORMAL}" ]" # Blinking Red X With BOX
+  nbCROSS=""${NORMAL}""${RED}""${BLINK}"✗"${NORMAL}"" # Blinking Red X Without BOX
+  CROSS=""${NORMAL}"["${RED}""${BRIGHT}"✖"${NORMAL}" ]" # Not blinking Red X With BOX
+  nCROSS=""${NORMAL}""${RED}"✖"${NORMAL}" " # Not blinking Red X Without BOX
+  NASA
+  # Typewriter Function loop
+  teletype() {
+    for ((i=0; i<=${#string}; i++)); do
+      printf "%s" "${string:$i:1}"
+      sleep 0.02
+    done
+    printf "%b\n"
+  }
+  printf "%b\n\n"
+  printf "%b"""${CYAN}"------------------------------------------------------------"${NORMAL}"""\n"
+  # Message printout
+  printf "%b" "${INFO}" "\t";string="Standby For Auto Docking Sequence"
+  teletype
+  sleep 1.5;
+  printf "%b"  "${INFO}" "\t";string="Auto Docking Sequence Initiated"
+  teletype
+  sleep .3;
+  printf "%b"  "${INFO}" "\t";string="Docking Maneuvers In Progress"
+  teletype
+  sleep 1.5;
+  printf "%b"  "${INFO}" "\t";string="Final Docking Adjustments"
+  teletype
+  sleep 1.5;
+  printf "%b"  "${TICK}" "\t";string=""${GREEN}"Docking Completed"${NORMAL}""
+  teletype
+
+  printf "%b"  "${INFO}" "\t";string="Air Quality / Pressure Check In Progress"
+  teletype
+  sleep 3.5;
+  printf "%b"  "${CROSS}" "\t";string=""${RED}"Air Quality / Pressure Check FAILED "${NORMAL}""
+  teletype
+  printf "%b"  "${INFO}" "\t";string=""${BLINK}""${RED}"*** "${NORMAL}" Re-initiating Docking Clamp Sequence "${BLINK}""${RED}" *** "${NORMAL}""
+  teletype
+  printf "%b"  "${INFO}" "\t";string="Final Docking Adjustments"
+  teletype
+  sleep 1.5;
+  printf "%b"  "${TICK}" "\t";string=""${GREEN}"Docking Completed"${NORMAL}""
+  teletype
+
+  printf "%b"  "${INFO}" "\t";string="Air Quality / Pressure Check In Progress"
+  teletype
+  sleep 3.5;
+  printf "%b"  "${TICK}" "\t";string=""${GREEN}"Air Quality / Pressure Check OK"${NORMAL}""
+  teletype
+  printf "%b"  "${INFO}" "\t";string="Auto Docking Sequence Complete"
+  teletype
+  printf "%b"  "${TICK}" "\t";string=""${GREEN}""${BLINK}"*** "${NORMAL}""${GREEN}"Crew Are Cleared For Docking Port Access "${BLINK}"***"${NORMAL}""
+  teletype
+  printf "%b"""${CYAN}"------------------------------------------------------------"${NORMAL}"""\n"
+  printf "%b\n"
+  ASTRONAUT
+  printf "%b\n\n"
+
+}
+#-----------------------------------------------------
+NASA() {
+  printf "${BLUE}"
+cat << "EOF"
+
+         __  _    __     __    __
+        |  \| |  /  \  /' _/  /  \
+        | | ' | | /\ | `._`. | /\ |
+        |_|\__| |_||_| |___/ |_||_|
+EOF
+  printf "${NORMAL}"
+}
+#-----------------------------------------------------
+ASTRONAUT() {
+  printf "${YELLOW}"
+cat << "EOF"
+        _..._
+      .'     '.      _
+     /    .-""-\   _/ \
+   .-|   /:.   |  |   |
+   |  \  |:.   /.-'-./
+   | .-'-;:__.'    =/
+   .'=  *=|NASA _.='
+  /   _.  |    ;
+ ;-.-'|    \   |
+/   | \    _\  _\
+\__/'._;.  ==' ==\
+         \    \   |
+         /    /   /
+         /-._/-._/
+         \   `\  \
+          `-._/._/
+EOF
+  printf "${NORMAL}"
+}
+main
